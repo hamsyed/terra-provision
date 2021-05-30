@@ -8,7 +8,7 @@ pipeline{
    }
     
     stages {
-        stage('terraform init and apply- ${params.ENV}){
+        stage('terraform init and apply- ${params.ENV}'){
             steps {
                sh returnStatus: true, script: 'terraform workspace new ${params.ENV}'
                 sh 'terraform init'
